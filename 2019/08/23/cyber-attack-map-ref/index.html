@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
+
+<link rel="stylesheet" href="/css/main.css?v=7.3.0">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '7.3.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    translation: {
+      copy_button: 'Copy',
+      copy_success: 'Copied',
+      copy_failure: 'Copy failed'
+    }
+  };
+</script>
+
+  <meta name="description" content="국가별 정보시각화 레펀러스 사이트업체별 지도 데이타 시각화 내용을 소개합니다. 1. 노스(Norse) 실시간으로 해킹 상황을 볼수 있으며 게임을 보는 듯한 현란한 모션 이펙트 화면을 제공 공격 effect 여겨 볼만함 Attak Orgin ( 공격 국가 ) , attack Target ( 공격 대상 ), Attaks ( 공격 실시간 로그 ), Attak T">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cyber-attack-map-ref">
+<meta property="og:url" content="https://haeju.github.io/2019/08/23/cyber-attack-map-ref/index.html">
+<meta property="og:site_name" content="dev blog">
+<meta property="og:description" content="국가별 정보시각화 레펀러스 사이트업체별 지도 데이타 시각화 내용을 소개합니다. 1. 노스(Norse) 실시간으로 해킹 상황을 볼수 있으며 게임을 보는 듯한 현란한 모션 이펙트 화면을 제공 공격 effect 여겨 볼만함 Attak Orgin ( 공격 국가 ) , attack Target ( 공격 대상 ), Attaks ( 공격 실시간 로그 ), Attak T">
+<meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2019-08-23T11:19:38.974Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cyber-attack-map-ref">
+<meta name="twitter:description" content="국가별 정보시각화 레펀러스 사이트업체별 지도 데이타 시각화 내용을 소개합니다. 1. 노스(Norse) 실시간으로 해킹 상황을 볼수 있으며 게임을 보는 듯한 현란한 모션 이펙트 화면을 제공 공격 effect 여겨 볼만함 Attak Orgin ( 공격 국가 ) , attack Target ( 공격 대상 ), Attaks ( 공격 실시간 로그 ), Attak T">
+  <link rel="canonical" href="https://haeju.github.io/2019/08/23/cyber-attack-map-ref/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true,
+    isPage: false,
+    isArchive: false
+  };
+</script>
+
+  <title>cyber-attack-map-ref | dev blog</title>
+  <meta name="generator" content="Hexo 3.9.0">
+  
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">dev blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="Toggle navigation bar">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+      
+      
+      
+        
+        <li class="menu-item menu-item-home">
+      
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-about">
+      
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-tags">
+      
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-archives">
+      
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+
+  </li>
+  </ul>
+
+    
+
+</nav>
+</div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content page-post-detail">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://haeju.github.io/2019/08/23/cyber-attack-map-ref/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="haeju.park">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">cyber-attack-map-ref
+
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-08-23 20:19:23 / Modified: 20:19:38" itemprop="dateCreated datePublished" datetime="2019-08-23T20:19:23+09:00">2019-08-23</time>
+            </span>
+          
+            
+
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h1 id="국가별-정보시각화-레펀러스-사이트"><a href="#국가별-정보시각화-레펀러스-사이트" class="headerlink" title="국가별 정보시각화 레펀러스 사이트"></a>국가별 정보시각화 레펀러스 사이트</h1><p>업체별 지도 데이타 시각화 내용을 소개합니다.</p>
+<h2 id="1-노스-Norse"><a href="#1-노스-Norse" class="headerlink" title="1. 노스(Norse)"></a>1. 노스(Norse)</h2><ul>
+<li>실시간으로 해킹 상황을 볼수 있으며 게임을 보는 듯한 현란한 모션 이펙트 화면을 제공</li>
+<li>공격 effect 여겨 볼만함</li>
+<li>Attak Orgin ( 공격 국가 ) , attack Target ( 공격 대상 ), Attaks ( 공격 실시간 로그 ), Attak Types ( 공격 종류 )</li>
+<li><a href="http://map.norsecorp.com" target="_blank" rel="noopener">http://map.norsecorp.com</a> ( 현재 사이트 닫힘 )</li>
+<li><a href="https://www.youtube.com/watch?v=xq3CKDY-HsA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=xq3CKDY-HsA</a></li>
+</ul>
+<h2 id="2-카스퍼스키-Kaspersky"><a href="#2-카스퍼스키-Kaspersky" class="headerlink" title="2. 카스퍼스키(Kaspersky)"></a>2. 카스퍼스키(Kaspersky)</h2><ul>
+<li>다양한 진단도구(On-Access Scan, On-demand Scan) </li>
+<li>웹 백신·메일 백신(Web and Mail Anti-Viruses) </li>
+<li>취약점 분석(Vulnerability Scan)</li>
+<li>침입탐지 시스템(Intrusion Detection System) 등 위협의 다채로운 분석</li>
+<li>공격 지점을 찍으면 1인칭 시점으로 줌인되어 공격 경로 확인가능</li>
+<li>3D Globe 및 2D Map 변환 기능 제공</li>
+<li>Trial 설치 파일 다운로드 가능</li>
+<li><a href="https://cybermap.kaspersky.com/" target="_blank" rel="noopener">https://cybermap.kaspersky.com/</a></li>
+<li><a href="https://www.youtube.com/watch?v=vuOLiu3wFQ0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=vuOLiu3wFQ0</a></li>
+</ul>
+<h2 id="3-체크포인트-소프트웨어-Check-Point"><a href="#3-체크포인트-소프트웨어-Check-Point" class="headerlink" title="3. 체크포인트 소프트웨어 (Check Point )"></a>3. 체크포인트 소프트웨어 (Check Point )</h2><ul>
+<li>비교적 단순한 화면과 인터렉티브</li>
+<li>공격대상 국가 TOP 순위정보와 하단에 실시간으로  타입별, 공격 국가,공격 대상 국가 정보 제공</li>
+<li><a href="https://threatmap.checkpoint.com/ThreatPortal/livemap.html" target="_blank" rel="noopener">https://threatmap.checkpoint.com/ThreatPortal/livemap.html</a></li>
+</ul>
+<h2 id="4-포티넷-Fortinet"><a href="#4-포티넷-Fortinet" class="headerlink" title="4. 포티넷 (Fortinet)"></a>4. 포티넷 (Fortinet)</h2><ul>
+<li>공격 에니메이션 Effect</li>
+<li>지도에서 국가 선택시 화면 확대, 공격 현황 제공</li>
+<li>매 초마다 발생하는 위협의 0.01%만을 지도에 표시한다. 이러한 데이터는 어떠한 웹 필터링이나 응용프로그램 제어 없이 포티게이트의 IPS 데이터만을 이용</li>
+<li><a href="https://threatmap.fortiguard.com/" target="_blank" rel="noopener">https://threatmap.fortiguard.com/</a></li>
+</ul>
+<h2 id="5-파이어아이-FireEye"><a href="#5-파이어아이-FireEye" class="headerlink" title="5. 파이어아이 (FireEye)"></a>5. 파이어아이 (FireEye)</h2><ul>
+<li>지난 30일 동안 파이어아이의 양방향 공유 고객으로부터 수집된 실제 데이터 샘플</li>
+<li>지도에 표시된 데이터는 ‘명령 및 제어(C&amp;C) 서버’로의 멀웨어 통신이다. </li>
+<li>‘Attacker’는 C&amp;C서버를 나타낸다. 그리고 ‘Target’은 고객을 나타낸다.</li>
+<li><a href="https://www.fireeye.com/cyber-map/threat-map.html" target="_blank" rel="noopener">https://www.fireeye.com/cyber-map/threat-map.html</a></li>
+</ul>
+<h2 id="6-아버-네트웍스"><a href="#6-아버-네트웍스" class="headerlink" title="6. 아버 네트웍스"></a>6. 아버 네트웍스</h2><ul>
+<li>구글 아이디어즈(Google Ideas)와 함께 만든 하이브리드 지도</li>
+<li>로우 데이터는 300개 이상의 ISP 고객과 130Tbps의 전세계 트래픽을 기반</li>
+<li><a href="http://www.digitalattackmap.com/" target="_blank" rel="noopener">http://www.digitalattackmap.com/</a></li>
+</ul>
+
+    </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/23/mark-down-sample/" rel="next" title="mark-down-sample">
+                  <i class="fa fa-chevron-left"></i> mark-down-sample
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
+  </div>
+  
+  
+  
+  </article>
+
+  </div>
+
+
+          </div>
+          
+
+        </div>
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+        
+        
+        
+        
+      
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc" data-target="post-toc-wrap">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc">
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#국가별-정보시각화-레펀러스-사이트"><span class="nav-number">1.</span> <span class="nav-text">국가별 정보시각화 레펀러스 사이트</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-노스-Norse"><span class="nav-number">1.1.</span> <span class="nav-text">1. 노스(Norse)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-카스퍼스키-Kaspersky"><span class="nav-number">1.2.</span> <span class="nav-text">2. 카스퍼스키(Kaspersky)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-체크포인트-소프트웨어-Check-Point"><span class="nav-number">1.3.</span> <span class="nav-text">3. 체크포인트 소프트웨어 (Check Point )</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-포티넷-Fortinet"><span class="nav-number">1.4.</span> <span class="nav-text">4. 포티넷 (Fortinet)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-파이어아이-FireEye"><span class="nav-number">1.5.</span> <span class="nav-text">5. 파이어아이 (FireEye)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-아버-네트웍스"><span class="nav-number">1.6.</span> <span class="nav-text">6. 아버 네트웍스</span></a></li></ol></li></ol></div>
+          </div>
+        
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">haeju.park</p>
+  <div class="site-description motion-element" itemprop="description"></div>
+</div>
+  <nav class="site-state motion-element">
+      <div class="site-state-item site-state-posts">
+        
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">5</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-tags">
+        
+        
+        
+          
+        
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">tags</span>
+        
+      </div>
+    
+  </nav>
+
+
+
+        </div>
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">haeju.park</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.3.0</div>
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+  </div>
+
+  
+  <script src="/lib/jquery/index.js?v=3.4.1"></script>
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+<script src="/js/utils.js?v=7.3.0"></script><script src="/js/motion.js?v=7.3.0"></script>
+<script src="/js/schemes/muse.js?v=7.3.0"></script>
+<script src="/js/next-boot.js?v=7.3.0"></script>
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+
+  
+  <script src="/js/post-details.js?v=7.3.0"></script>
+
+
+</body>
+</html>
