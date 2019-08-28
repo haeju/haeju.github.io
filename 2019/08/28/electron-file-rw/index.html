@@ -54,21 +54,21 @@
   };
 </script>
 
-  <meta name="description" content="electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능합니다.단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 합니다. 바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에">
+  <meta name="description" content="ipc 통신  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Electron에서의 파일처리">
 <meta property="og:url" content="https://haeju.github.io/2019/08/28/electron-file-rw/index.html">
 <meta property="og:site_name" content="dev blog">
-<meta property="og:description" content="electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능합니다.단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 합니다. 바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에">
+<meta property="og:description" content="ipc 통신  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/1.png">
-<meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/2.png">
-<meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/3.png">
-<meta property="og:updated_time" content="2019-08-28T05:20:47.446Z">
+<meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/post1.png">
+<meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/post2.png">
+<meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/post3.png">
+<meta property="og:updated_time" content="2019-08-28T05:41:39.549Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Electron에서의 파일처리">
-<meta name="twitter:description" content="electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능합니다.단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 합니다. 바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에">
-<meta name="twitter:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/1.png">
+<meta name="twitter:description" content="ipc 통신  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸">
+<meta name="twitter:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/post1.png">
   <link rel="canonical" href="https://haeju.github.io/2019/08/28/electron-file-rw/">
 
 
@@ -245,7 +245,7 @@
                 
               
 
-              <time title="Created: 2019-08-28 14:10:36 / Modified: 14:20:47" itemprop="dateCreated datePublished" datetime="2019-08-28T14:10:36+09:00">2019-08-28</time>
+              <time title="Created: 2019-08-28 14:10:36 / Modified: 14:41:39" itemprop="dateCreated datePublished" datetime="2019-08-28T14:10:36+09:00">2019-08-28</time>
             </span>
           
             
@@ -264,33 +264,26 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <ul>
-<li>electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능합니다.단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 합니다. 바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에 ipc 통신을 통해 처리되도록 기능 추가하였습니다.</li>
-</ul>
-<p>##</p>
-<img src="/2019/08/28/electron-file-rw/1.png" width="1">
+        <h3 id="ipc-통신"><a href="#ipc-통신" class="headerlink" title="ipc 통신"></a>ipc 통신</h3><p>  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.<br>  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.<br>  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에 ipc 통신을 통해 처리되도록 기능 추가.</p>
+<h3 id="이벤트-등록"><a href="#이벤트-등록" class="headerlink" title="이벤트 등록"></a>이벤트 등록</h3><p>  Main Process에서 src/main/ipc/fs.js 작성하면 Wrapper모듈을 ipc 이벤트로 등록.</p>
+<img src="/2019/08/28/electron-file-rw/post1.png" title="이벤트등록">
+
+
+<h3 id="prototype-지정"><a href="#prototype-지정" class="headerlink" title="prototype 지정"></a>prototype 지정</h3><p>  Renderer Process에서 플러그인 src/renderer/plugins/ipc.js 내에 prototype지정.</p>
+<img src="/2019/08/28/electron-file-rw/post2.png" title="prototype지정">
+
+
+<h3 id="사용"><a href="#사용" class="headerlink" title="사용"></a>사용</h3><p>  vue나 store에서 사용.</p>
+<img src="/2019/08/28/electron-file-rw/post3.png" title="사용">
+
 <ul>
-<li>Main Process에서 src/main/ipc/fs.js 작성하면 Wrapper모듈을 ipc 이벤트로 등록.</li>
-</ul>
-<p>##</p>
-<img src="/2019/08/28/electron-file-rw/2.png" width="2">
-<ul>
-<li>Renderer Process에서 플러그인 src/renderer/plugins/ipc.js 내에 prototype지정.</li>
-</ul>
-<p>##</p>
-<img src="/2019/08/28/electron-file-rw/3.png" width="3">
-<ul>
-<li><p>위 처럼 vue나 store에서 사용할수 있습니다.</p>
-</li>
-<li><p>파일 쓰기</p>
-<ul>
+<li>파일 쓰기<ul>
 <li>this.$writeFile(‘파일경로’, ‘데이타’, [‘옵션’])</li>
 <li>각 파라미터는 fs.writeFile와 동일</li>
 <li>Promise로 리턴되므로 async await를 사용</li>
 </ul>
 </li>
-<li><p>파일 읽기</p>
-<ul>
+<li>파일 읽기<ul>
 <li>this.$readFile(‘파일경로’, [‘옵션’])</li>
 <li>각 파라미터는 fs.readFile와 동일</li>
 <li>Promise로 리턴되므로 async await를 사용</li>
@@ -372,7 +365,7 @@
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
           <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Related-Posts"><span class="nav-number">1.</span> <span class="nav-text">Related Posts</span></a></li></ol></div>
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ipc-통신"><span class="nav-number">1.</span> <span class="nav-text">ipc 통신</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#이벤트-등록"><span class="nav-number">2.</span> <span class="nav-text">이벤트 등록</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prototype-지정"><span class="nav-number">3.</span> <span class="nav-text">prototype 지정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#사용"><span class="nav-number">4.</span> <span class="nav-text">사용</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Related-Posts"><span class="nav-number">5.</span> <span class="nav-text">Related Posts</span></a></li></ol></div>
           </div>
         
       </div>
