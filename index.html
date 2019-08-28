@@ -208,7 +208,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://haeju.github.io/2019/08/26/cyber-attack-map-ref/">
+    <link itemprop="mainEntityOfPage" href="https://haeju.github.io/2019/08/28/electron-file-rw/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="haeju.park">
@@ -222,7 +222,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/08/26/cyber-attack-map-ref/" class="post-title-link" itemprop="url">cyber attack map ref</a>
+            <a href="/2019/08/28/electron-file-rw/" class="post-title-link" itemprop="url">Electron에서의 파일처리</a>
           
         </h1>
 
@@ -237,7 +237,7 @@
                 
               
 
-              <time title="Created: 2019-08-26 14:21:07 / Modified: 15:06:09" itemprop="dateCreated datePublished" datetime="2019-08-26T14:21:07+09:00">2019-08-26</time>
+              <time title="Created: 2019-08-28 14:10:36 / Modified: 14:20:47" itemprop="dateCreated datePublished" datetime="2019-08-28T14:10:36+09:00">2019-08-28</time>
             </span>
           
             
@@ -256,7 +256,123 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="국가별-정보시각화-레펀러스-사이트"><a href="#국가별-정보시각화-레펀러스-사이트" class="headerlink" title="국가별 정보시각화 레펀러스 사이트"></a>국가별 정보시각화 레펀러스 사이트</h1><p>업체별 지도 데이타 시각화 내용을 소개합니다.</p>
+          <ul>
+<li>electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능합니다.단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 합니다. 바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에 ipc 통신을 통해 처리되도록 기능 추가하였습니다.</li>
+</ul>
+<p>##</p>
+<img src="/2019/08/28/electron-file-rw/1.png" width="1">
+<ul>
+<li>Main Process에서 src/main/ipc/fs.js 작성하면 Wrapper모듈을 ipc 이벤트로 등록.</li>
+</ul>
+<p>##</p>
+<img src="/2019/08/28/electron-file-rw/2.png" width="2">
+<ul>
+<li>Renderer Process에서 플러그인 src/renderer/plugins/ipc.js 내에 prototype지정.</li>
+</ul>
+<p>##</p>
+<img src="/2019/08/28/electron-file-rw/3.png" width="3">
+<ul>
+<li><p>위 처럼 vue나 store에서 사용할수 있습니다.</p>
+</li>
+<li><p>파일 쓰기</p>
+<ul>
+<li>this.$writeFile(‘파일경로’, ‘데이타’, [‘옵션’])</li>
+<li>각 파라미터는 fs.writeFile와 동일</li>
+<li>Promise로 리턴되므로 async await를 사용</li>
+</ul>
+</li>
+<li><p>파일 읽기</p>
+<ul>
+<li>this.$readFile(‘파일경로’, [‘옵션’])</li>
+<li>각 파라미터는 fs.readFile와 동일</li>
+<li>Promise로 리턴되므로 async await를 사용</li>
+</ul>
+</li>
+</ul>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><hr>
+
+        
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+          <div class="post-eof"></div>
+        
+      </footer>
+  </div>
+  
+  
+  
+  </article>
+
+    
+      
+
+  <article class="post" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://haeju.github.io/2019/08/26/cyber-attack-map-ref/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="haeju.park">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+            
+            <a href="/2019/08/26/cyber-attack-map-ref/" class="post-title-link" itemprop="url">국가별 정보시각화 레펀러스 사이트</a>
+          
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              
+                
+              
+
+              <time title="Created: 2019-08-26 14:21:07" itemprop="dateCreated datePublished" datetime="2019-08-26T14:21:07+09:00">2019-08-26</time>
+            </span>
+          
+            
+
+            
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2019-08-28 13:33:03" itemprop="dateModified" datetime="2019-08-28T13:33:03+09:00">2019-08-28</time>
+              </span>
+            
+          
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>업체별 지도 데이타 시각화 내용을 소개합니다.</p>
 <h2 id="1-노스-Norse"><a href="#1-노스-Norse" class="headerlink" title="1. 노스(Norse)"></a>1. 노스(Norse)</h2><img src="/2019/08/26/cyber-attack-map-ref/norse.png" title="노스(Norse)">
 <ul>
 <li>실시간으로 해킹 상황을 볼수 있으며 게임을 보는 듯한 현란한 모션 이펙트 화면을 제공</li>
@@ -506,7 +622,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-27 19:34:09" itemprop="dateModified" datetime="2019-08-27T19:34:09+09:00">2019-08-27</time>
+                <time title="Modified: 2019-08-28 10:54:32" itemprop="dateModified" datetime="2019-08-28T10:54:32+09:00">2019-08-28</time>
               </span>
             
           
@@ -528,7 +644,11 @@
 <li><strong><em><code>&lt;circle&gt;, &lt;rect&gt;, &lt;line&gt;, &lt;polygon&gt;</code></em></strong></li>
 <li><strong><em><code>&lt;text&gt;</code></em></strong></li>
 <li><strong><em><code>&lt;g&gt;</code></em></strong></li>
-<li><strong><em><code>&lt;path&gt;</code></em></strong></li>
+<li><strong><em><code>&lt;path&gt;</code></em></strong><ul>
+<li>d 속성이 결정하는 도형의 영역이다. </li>
+<li>d 속성 마지막에 Z 문자열이 있으면 영역(area)이되고 없다면 선이나 곡선등 열린 도형(?)이 된다.</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
@@ -644,9 +764,24 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">categories</span>
+        
       </div>
     
       
@@ -654,6 +789,12 @@
       <div class="site-state-item site-state-tags">
         
         
+        
+          
+        
+          
+        
+          
         
           
         

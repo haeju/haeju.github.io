@@ -54,14 +54,22 @@
   };
 </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="dev blog">
-<meta property="og:url" content="https://haeju.github.io/archives/index.html">
+  <meta name="description" content="electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능합니다.단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 합니다. 바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Electron에서의 파일처리">
+<meta property="og:url" content="https://haeju.github.io/2019/08/28/electron-file-rw/index.html">
 <meta property="og:site_name" content="dev blog">
+<meta property="og:description" content="electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능합니다.단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 합니다. 바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/1.png">
+<meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/2.png">
+<meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/3.png">
+<meta property="og:updated_time" content="2019-08-28T05:20:47.446Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="dev blog">
-  <link rel="canonical" href="https://haeju.github.io/archives/">
+<meta name="twitter:title" content="Electron에서의 파일처리">
+<meta name="twitter:description" content="electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능합니다.단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 합니다. 바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에">
+<meta name="twitter:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/1.png">
+  <link rel="canonical" href="https://haeju.github.io/2019/08/28/electron-file-rw/">
 
 
 <script id="page-configurations">
@@ -69,13 +77,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: false,
+    isPost: true,
     isPage: false,
-    isArchive: true
+    isArchive: false
   };
 </script>
 
-  <title>Archive | dev blog</title>
+  <title>Electron에서의 파일처리 | dev blog</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -191,24 +199,6 @@
 
     
 
-    
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-      
-      
-    
-    
-
-  
-
 </nav>
 </div>
     </header>
@@ -216,156 +206,136 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
-          <div id="content" class="content page-archive">
+          <div id="content" class="content page-post-detail">
             
 
-  
-  
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        
-        
-        
-          
-        
-        <span class="collection-header">Um..! 4 posts in total. Keep on posting.</span>
-      </div>
-      
-
-      
-
-  
-  
-
-  
+  <div id="posts" class="posts-expand">
     
-    <div class="collection-year">
-      <h1 class="collection-header">2019</h1>
-    </div>
-  
 
   <article class="post" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/28/electron-file-rw/" itemprop="url">
-            <span itemprop="name">Electron에서의 파일처리</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-08-28T14:10:36+09:00"
-              content="2019-08-28">
-          08-28
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
   
   
-
   
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://haeju.github.io/2019/08/28/electron-file-rw/">
 
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="haeju.park">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/26/cyber-attack-map-ref/" itemprop="url">
-            <span itemprop="name">국가별 정보시각화 레펀러스 사이트</span>
-          </a>
-        
-      </h2>
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="dev blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">Electron에서의 파일처리
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-08-26T14:21:07+09:00"
-              content="2019-08-26">
-          08-26
-        </time>
-      </div>
+          
+        </h1>
 
-    </header>
-  </article>
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
 
+              
+                
+              
 
+              <time title="Created: 2019-08-28 14:10:36 / Modified: 14:20:47" itemprop="dateCreated datePublished" datetime="2019-08-28T14:10:36+09:00">2019-08-28</time>
+            </span>
+          
+            
 
-  
-  
+            
+          
 
-  
+          
 
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+        </div>
+      </header>
 
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/23/mark-down-sample/" itemprop="url">
-            <span itemprop="name">마크 다운 예제</span>
-          </a>
-        
-      </h2>
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-08-23T20:18:48+09:00"
-              content="2019-08-23">
-          08-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-  
-  
-
-  
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-          <a class="post-title-link" href="/2019/08/23/d3-introduce/" itemprop="url">
-            <span itemprop="name">d3</span>
-          </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2019-08-23T20:17:29+09:00"
-              content="2019-08-23">
-          08-23
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
+      
+        <ul>
+<li>electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능합니다.단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 합니다. 바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에 ipc 통신을 통해 처리되도록 기능 추가하였습니다.</li>
+</ul>
+<p>##</p>
+<img src="/2019/08/28/electron-file-rw/1.png" width="1">
+<ul>
+<li>Main Process에서 src/main/ipc/fs.js 작성하면 Wrapper모듈을 ipc 이벤트로 등록.</li>
+</ul>
+<p>##</p>
+<img src="/2019/08/28/electron-file-rw/2.png" width="2">
+<ul>
+<li>Renderer Process에서 플러그인 src/renderer/plugins/ipc.js 내에 prototype지정.</li>
+</ul>
+<p>##</p>
+<img src="/2019/08/28/electron-file-rw/3.png" width="3">
+<ul>
+<li><p>위 처럼 vue나 store에서 사용할수 있습니다.</p>
+</li>
+<li><p>파일 쓰기</p>
+<ul>
+<li>this.$writeFile(‘파일경로’, ‘데이타’, [‘옵션’])</li>
+<li>각 파라미터는 fs.writeFile와 동일</li>
+<li>Promise로 리턴되므로 async await를 사용</li>
+</ul>
+</li>
+<li><p>파일 읽기</p>
+<ul>
+<li>this.$readFile(‘파일경로’, [‘옵션’])</li>
+<li>각 파라미터는 fs.readFile와 동일</li>
+<li>Promise로 리턴되므로 async await를 사용</li>
+</ul>
+</li>
+</ul>
+<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><hr>
 
     </div>
+
+    
+    
+    
+        
+      
+
+      <footer class="post-footer">
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-next post-nav-item">
+              
+                <a href="/2019/08/26/cyber-attack-map-ref/" rel="next" title="국가별 정보시각화 레펀러스 사이트">
+                  <i class="fa fa-chevron-left"></i> 국가별 정보시각화 레펀러스 사이트
+                </a>
+              
+            </div>
+
+            <span class="post-nav-divider"></span>
+
+            <div class="post-nav-prev post-nav-item">
+              
+            </div>
+          </div>
+        
+      </footer>
+    
   </div>
   
   
   
+  </article>
 
-  
-
+  </div>
 
 
           </div>
@@ -384,6 +354,11 @@
 
   <aside id="sidebar" class="sidebar">
     <div class="sidebar-inner">
+        
+        
+        
+        
+      
 
       <ul class="sidebar-nav motion-element">
         <li class="sidebar-nav-toc" data-target="post-toc-wrap">
@@ -396,6 +371,10 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc">
+            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#Related-Posts"><span class="nav-number">1.</span> <span class="nav-text">Related Posts</span></a></li></ol></div>
+          </div>
+        
       </div>
       <!--/noindex-->
 
@@ -541,5 +520,8 @@
 
 
   
+  <script src="/js/post-details.js?v=7.3.0"></script>
+
+
 </body>
 </html>

@@ -54,18 +54,18 @@
   };
 </script>
 
-  <meta name="description" content="d3 SVG 구성요소 &amp;lt;svg&amp;gt; &amp;lt;circle&amp;gt;, &amp;lt;rect&amp;gt;, &amp;lt;line&amp;gt;, &amp;lt;polygon&amp;gt; &amp;lt;text&amp;gt; &amp;lt;g&amp;gt; &amp;lt;path&amp;gt;     데이타 변환 캐스팅 ( 형변환 ) 정규화 ( 스케일과 규모변경 ) scaleLinear()   비닝 ( 그룹화 : 데이터 분류 ) 내포">
+  <meta name="description" content="d3 SVG 구성요소 &amp;lt;svg&amp;gt; &amp;lt;circle&amp;gt;, &amp;lt;rect&amp;gt;, &amp;lt;line&amp;gt;, &amp;lt;polygon&amp;gt; &amp;lt;text&amp;gt; &amp;lt;g&amp;gt; &amp;lt;path&amp;gt; d 속성이 결정하는 도형의 영역이다.  d 속성 마지막에 Z 문자열이 있으면 영역(area)이되고 없다면 선이나 곡선등 열린 도형(?)이 된다.">
 <meta name="keywords" content="d3, svg">
 <meta property="og:type" content="article">
 <meta property="og:title" content="d3">
 <meta property="og:url" content="https://haeju.github.io/2019/08/23/d3-introduce/index.html">
 <meta property="og:site_name" content="dev blog">
-<meta property="og:description" content="d3 SVG 구성요소 &amp;lt;svg&amp;gt; &amp;lt;circle&amp;gt;, &amp;lt;rect&amp;gt;, &amp;lt;line&amp;gt;, &amp;lt;polygon&amp;gt; &amp;lt;text&amp;gt; &amp;lt;g&amp;gt; &amp;lt;path&amp;gt;     데이타 변환 캐스팅 ( 형변환 ) 정규화 ( 스케일과 규모변경 ) scaleLinear()   비닝 ( 그룹화 : 데이터 분류 ) 내포">
+<meta property="og:description" content="d3 SVG 구성요소 &amp;lt;svg&amp;gt; &amp;lt;circle&amp;gt;, &amp;lt;rect&amp;gt;, &amp;lt;line&amp;gt;, &amp;lt;polygon&amp;gt; &amp;lt;text&amp;gt; &amp;lt;g&amp;gt; &amp;lt;path&amp;gt; d 속성이 결정하는 도형의 영역이다.  d 속성 마지막에 Z 문자열이 있으면 영역(area)이되고 없다면 선이나 곡선등 열린 도형(?)이 된다.">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2019-08-27T10:34:09.505Z">
+<meta property="og:updated_time" content="2019-08-28T01:54:32.907Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="d3">
-<meta name="twitter:description" content="d3 SVG 구성요소 &amp;lt;svg&amp;gt; &amp;lt;circle&amp;gt;, &amp;lt;rect&amp;gt;, &amp;lt;line&amp;gt;, &amp;lt;polygon&amp;gt; &amp;lt;text&amp;gt; &amp;lt;g&amp;gt; &amp;lt;path&amp;gt;     데이타 변환 캐스팅 ( 형변환 ) 정규화 ( 스케일과 규모변경 ) scaleLinear()   비닝 ( 그룹화 : 데이터 분류 ) 내포">
+<meta name="twitter:description" content="d3 SVG 구성요소 &amp;lt;svg&amp;gt; &amp;lt;circle&amp;gt;, &amp;lt;rect&amp;gt;, &amp;lt;line&amp;gt;, &amp;lt;polygon&amp;gt; &amp;lt;text&amp;gt; &amp;lt;g&amp;gt; &amp;lt;path&amp;gt; d 속성이 결정하는 도형의 영역이다.  d 속성 마지막에 Z 문자열이 있으면 영역(area)이되고 없다면 선이나 곡선등 열린 도형(?)이 된다.">
   <link rel="canonical" href="https://haeju.github.io/2019/08/23/d3-introduce/">
 
 
@@ -253,7 +253,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-27 19:34:09" itemprop="dateModified" datetime="2019-08-27T19:34:09+09:00">2019-08-27</time>
+                <time title="Modified: 2019-08-28 10:54:32" itemprop="dateModified" datetime="2019-08-28T10:54:32+09:00">2019-08-28</time>
               </span>
             
           
@@ -275,7 +275,11 @@
 <li><strong><em><code>&lt;circle&gt;, &lt;rect&gt;, &lt;line&gt;, &lt;polygon&gt;</code></em></strong></li>
 <li><strong><em><code>&lt;text&gt;</code></em></strong></li>
 <li><strong><em><code>&lt;g&gt;</code></em></strong></li>
-<li><strong><em><code>&lt;path&gt;</code></em></strong></li>
+<li><strong><em><code>&lt;path&gt;</code></em></strong><ul>
+<li>d 속성이 결정하는 도형의 영역이다. </li>
+<li>d 속성 마지막에 Z 문자열이 있으면 영역(area)이되고 없다면 선이나 곡선등 열린 도형(?)이 된다.</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
@@ -425,9 +429,24 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">posts</span>
         </a>
+      </div>
+    
+      
+      
+      <div class="site-state-item site-state-categories">
+        
+        
+        
+          
+        
+          
+        
+        <span class="site-state-item-count">0</span>
+        <span class="site-state-item-name">categories</span>
+        
       </div>
     
       
@@ -435,6 +454,12 @@
       <div class="site-state-item site-state-tags">
         
         
+        
+          
+        
+          
+        
+          
         
           
         
