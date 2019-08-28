@@ -65,7 +65,7 @@
 <meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/post1.png">
 <meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/post2.png">
 <meta property="og:image" content="https://haeju.github.io/2019/08/28/electron-file-rw/post3.png">
-<meta property="og:updated_time" content="2019-08-28T05:48:37.659Z">
+<meta property="og:updated_time" content="2019-08-28T06:22:55.556Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Electron에서의 파일처리">
 <meta name="twitter:description" content="ipc 통신  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸">
@@ -189,6 +189,17 @@
       
       
         
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+      
+      
+      
+        
         <li class="menu-item menu-item-archives">
       
     
@@ -246,7 +257,7 @@
                 
               
 
-              <time title="Created: 2019-08-28 14:10:36 / Modified: 14:48:37" itemprop="dateCreated datePublished" datetime="2019-08-28T14:10:36+09:00">2019-08-28</time>
+              <time title="Created: 2019-08-28 14:10:36 / Modified: 15:22:55" itemprop="dateCreated datePublished" datetime="2019-08-28T14:10:36+09:00">2019-08-28</time>
             </span>
           
             
@@ -286,6 +297,8 @@
 
       
         <h3 id="ipc-통신"><a href="#ipc-통신" class="headerlink" title="ipc 통신"></a>ipc 통신</h3><p>  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.<br>  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.<br>  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에 ipc 통신을 통해 처리되도록 기능 추가.</p>
+<a id="more"></a>
+
 <h3 id="이벤트-등록"><a href="#이벤트-등록" class="headerlink" title="이벤트 등록"></a>이벤트 등록</h3><p>  Main Process에서 src/main/ipc/fs.js 작성하면 Wrapper모듈을 ipc 이벤트로 등록.</p>
 <img src="/2019/08/28/electron-file-rw/post1.png" title="이벤트등록">
 
@@ -439,7 +452,7 @@
         
           
         
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span>
         
       </div>
@@ -470,7 +483,9 @@
         
           
         
-        <span class="site-state-item-count">7</span>
+          
+        
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span>
         
       </div>

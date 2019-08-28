@@ -180,6 +180,17 @@
       
       
         
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>Categories</a>
+
+  </li>
+      
+      
+      
+        
         <li class="menu-item menu-item-archives">
       
     
@@ -237,7 +248,7 @@
                 
               
 
-              <time title="Created: 2019-08-28 14:10:36 / Modified: 14:48:37" itemprop="dateCreated datePublished" datetime="2019-08-28T14:10:36+09:00">2019-08-28</time>
+              <time title="Created: 2019-08-28 14:10:36 / Modified: 15:22:55" itemprop="dateCreated datePublished" datetime="2019-08-28T14:10:36+09:00">2019-08-28</time>
             </span>
           
             
@@ -277,33 +288,15 @@
 
       
           <h3 id="ipc-통신"><a href="#ipc-통신" class="headerlink" title="ipc 통신"></a>ipc 통신</h3><p>  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.<br>  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.<br>  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에 ipc 통신을 통해 처리되도록 기능 추가.</p>
-<h3 id="이벤트-등록"><a href="#이벤트-등록" class="headerlink" title="이벤트 등록"></a>이벤트 등록</h3><p>  Main Process에서 src/main/ipc/fs.js 작성하면 Wrapper모듈을 ipc 이벤트로 등록.</p>
-<img src="/2019/08/28/electron-file-rw/post1.png" title="이벤트등록">
-
-
-<h3 id="prototype-지정"><a href="#prototype-지정" class="headerlink" title="prototype 지정"></a>prototype 지정</h3><p>  Renderer Process에서 플러그인 src/renderer/plugins/ipc.js 내에 prototype지정.</p>
-<img src="/2019/08/28/electron-file-rw/post2.png" title="prototype지정">
-
-
-<h3 id="사용"><a href="#사용" class="headerlink" title="사용"></a>사용</h3><p>  vue나 store에서 사용.</p>
-<img src="/2019/08/28/electron-file-rw/post3.png" title="사용">
-
-<ul>
-<li>파일 쓰기<ul>
-<li>this.$writeFile(‘파일경로’, ‘데이타’, [‘옵션’])</li>
-<li>각 파라미터는 fs.writeFile와 동일</li>
-<li>Promise로 리턴되므로 async await를 사용</li>
-</ul>
-</li>
-<li>파일 읽기<ul>
-<li>this.$readFile(‘파일경로’, [‘옵션’])</li>
-<li>각 파라미터는 fs.readFile와 동일</li>
-<li>Promise로 리턴되므로 async await를 사용</li>
-</ul>
-</li>
-</ul>
-<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><hr>
-
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/28/electron-file-rw/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -369,7 +362,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-28 14:27:49" itemprop="dateModified" datetime="2019-08-28T14:27:49+09:00">2019-08-28</time>
+                <time title="Modified: 2019-08-28 18:50:16" itemprop="dateModified" datetime="2019-08-28T18:50:16+09:00">2019-08-28</time>
               </span>
             
           
@@ -386,54 +379,15 @@
 
       
           <p>업체별 지도 데이타 시각화 내용을 소개합니다.</p>
-<h2 id="1-노스-Norse"><a href="#1-노스-Norse" class="headerlink" title="1. 노스(Norse)"></a>1. 노스(Norse)</h2><img src="/2019/08/26/cyber-attack-map-ref/norse.png" title="노스(Norse)">
-<ul>
-<li>실시간으로 해킹 상황을 볼수 있으며 게임을 보는 듯한 현란한 모션 이펙트 화면을 제공</li>
-<li>공격 effect 여겨 볼만함</li>
-<li>Attak Orgin ( 공격 국가 ) , attack Target ( 공격 대상 ), Attaks ( 공격 실시간 로그 ), Attak Types ( 공격 종류 )</li>
-<li><a href="http://map.norsecorp.com" target="_blank" rel="noopener">http://map.norsecorp.com</a> ( 현재 사이트 닫힘 )</li>
-<li><a href="https://www.youtube.com/watch?v=xq3CKDY-HsA" target="_blank" rel="noopener">https://www.youtube.com/watch?v=xq3CKDY-HsA</a></li>
-</ul>
-<h2 id="2-카스퍼스키-Kaspersky"><a href="#2-카스퍼스키-Kaspersky" class="headerlink" title="2. 카스퍼스키(Kaspersky)"></a>2. 카스퍼스키(Kaspersky)</h2><img src="/2019/08/26/cyber-attack-map-ref/카스퍼1.png" title="카스퍼1">
-<img src="/2019/08/26/cyber-attack-map-ref/카스퍼2.png" title="카스퍼2">
-<ul>
-<li>다양한 진단도구(On-Access Scan, On-demand Scan) </li>
-<li>웹 백신·메일 백신(Web and Mail Anti-Viruses) </li>
-<li>취약점 분석(Vulnerability Scan)</li>
-<li>침입탐지 시스템(Intrusion Detection System) 등 위협의 다채로운 분석</li>
-<li>공격 지점을 찍으면 1인칭 시점으로 줌인되어 공격 경로 확인가능</li>
-<li>3D Globe 및 2D Map 변환 기능 제공</li>
-<li>Trial 설치 파일 다운로드 가능</li>
-<li><a href="https://cybermap.kaspersky.com/" target="_blank" rel="noopener">https://cybermap.kaspersky.com/</a></li>
-<li><a href="https://www.youtube.com/watch?v=vuOLiu3wFQ0" target="_blank" rel="noopener">https://www.youtube.com/watch?v=vuOLiu3wFQ0</a></li>
-</ul>
-<h2 id="3-체크포인트-소프트웨어-Check-Point"><a href="#3-체크포인트-소프트웨어-Check-Point" class="headerlink" title="3. 체크포인트 소프트웨어 (Check Point )"></a>3. 체크포인트 소프트웨어 (Check Point )</h2><img src="/2019/08/26/cyber-attack-map-ref/체크포인트.png" title="체크포인트">
-<ul>
-<li>비교적 단순한 화면과 인터렉티브</li>
-<li>공격대상 국가 TOP 순위정보와 하단에 실시간으로  타입별, 공격 국가,공격 대상 국가 정보 제공</li>
-<li><a href="https://threatmap.checkpoint.com/ThreatPortal/livemap.html" target="_blank" rel="noopener">https://threatmap.checkpoint.com/ThreatPortal/livemap.html</a></li>
-</ul>
-<h2 id="4-포티넷-Fortinet"><a href="#4-포티넷-Fortinet" class="headerlink" title="4. 포티넷 (Fortinet)"></a>4. 포티넷 (Fortinet)</h2><img src="/2019/08/26/cyber-attack-map-ref/포티넷1.png" title="포티넷">
-<ul>
-<li>공격 에니메이션 Effect</li>
-<li>지도에서 국가 선택시 화면 확대, 공격 현황 제공</li>
-<li>매 초마다 발생하는 위협의 0.01%만을 지도에 표시한다. 이러한 데이터는 어떠한 웹 필터링이나 응용프로그램 제어 없이 포티게이트의 IPS 데이터만을 이용</li>
-<li><a href="https://threatmap.fortiguard.com/" target="_blank" rel="noopener">https://threatmap.fortiguard.com/</a></li>
-</ul>
-<h2 id="5-파이어아이-FireEye"><a href="#5-파이어아이-FireEye" class="headerlink" title="5. 파이어아이 (FireEye)"></a>5. 파이어아이 (FireEye)</h2><img src="/2019/08/26/cyber-attack-map-ref/파이어아이.png" title="파이어아이">
-<ul>
-<li>지난 30일 동안 파이어아이의 양방향 공유 고객으로부터 수집된 실제 데이터 샘플</li>
-<li>지도에 표시된 데이터는 ‘명령 및 제어(C&amp;C) 서버’로의 멀웨어 통신이다. </li>
-<li>‘Attacker’는 C&amp;C서버를 나타낸다. 그리고 ‘Target’은 고객을 나타낸다.</li>
-<li><a href="https://www.fireeye.com/cyber-map/threat-map.html" target="_blank" rel="noopener">https://www.fireeye.com/cyber-map/threat-map.html</a></li>
-</ul>
-<h2 id="6-아버-네트웍스"><a href="#6-아버-네트웍스" class="headerlink" title="6. 아버 네트웍스"></a>6. 아버 네트웍스</h2><img src="/2019/08/26/cyber-attack-map-ref/디지탈%20공격%20맵.png" title="디지탈 공격 맵">
-<ul>
-<li>구글 아이디어즈(Google Ideas)와 함께 만든 하이브리드 지도</li>
-<li>로우 데이터는 300개 이상의 ISP 고객과 130Tbps의 전세계 트래픽을 기반</li>
-<li><a href="http://www.digitalattackmap.com/" target="_blank" rel="noopener">http://www.digitalattackmap.com/</a></li>
-</ul>
-<h2 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h2>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/26/cyber-attack-map-ref/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -499,7 +453,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-26 11:12:46" itemprop="dateModified" datetime="2019-08-26T11:12:46+09:00">2019-08-26</time>
+                <time title="Modified: 2019-08-28 15:23:57" itemprop="dateModified" datetime="2019-08-28T15:23:57+09:00">2019-08-28</time>
               </span>
             
           
@@ -515,61 +469,16 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="d3"><a href="#d3" class="headerlink" title="d3"></a><strong>d3</strong></h1><h2 id="SVG-구성요소"><a href="#SVG-구성요소" class="headerlink" title="SVG 구성요소"></a>SVG 구성요소</h2><ol>
-<li><strong><em><code>&lt;svg&gt;</code></em></strong></li>
-<li><strong><em><code>&lt;circle&gt;, &lt;rect&gt;, &lt;line&gt;, &lt;polygon&gt;</code></em></strong></li>
-<li><strong><em><code>&lt;text&gt;</code></em></strong></li>
-<li><strong><em><code>&lt;g&gt;</code></em></strong></li>
-<li><strong><em><code>&lt;path&gt;</code></em></strong></li>
-</ol>
-<table>
-<thead>
-<tr>
-<th align="left">column</th>
-<th align="right">column</th>
-<th align="center">column</th>
-</tr>
-</thead>
-<tbody><tr>
-<td align="left">a</td>
-<td align="right">b</td>
-<td align="center">c</td>
-</tr>
-</tbody></table>
-<blockquote>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-<blockquote>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
-</blockquote>
-</blockquote>
-<ul>
-<li><input disabled type="checkbox"> checkBox</li>
-</ul>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">created () &#123;</span><br><span class="line">      <span class="comment">// 브라우저의 Resize 이벤트를 컴포넌트의 인스턴스 메서드에 연결합니다.</span></span><br><span class="line">      <span class="keyword">this</span>._onResizeWorldMap = _.throttle(<span class="keyword">this</span>.onResizeWorldMap, <span class="number">500</span>)</span><br><span class="line"></span><br><span class="line">      <span class="comment">// 리사이즈 이벤트 연결</span></span><br><span class="line">      <span class="built_in">window</span>.addEventListener(<span class="string">'resize'</span>, <span class="keyword">this</span>._onResizeWorldMap)</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
-
-<p>그냥 태그<a>를 쓰면 사라지니까 한줄 코드를 써야<code>&lt;a&gt;</code> 합니다.<br>짧은 코드를 쓸 때 유용합니다</a></p>
-<p>  <a href="www.hashcode.co.kr">해시코드 사이트</a></p>
-<ul>
-<li>탕탕</li>
-<li>빵야<ul>
-<li>타당타당</li>
-<li>빠밤빠밤    </li>
-</ul>
-</li>
-</ul>
-<ol>
-<li>하나</li>
-<li>둘</li>
-<li>셋<ol>
-<li>셋에 하나</li>
-<li>셋에 둘</li>
-</ol>
-</li>
-</ol>
-<blockquote>
-<p>교수님이 말씀하시길<br>코딩하기 좋은 날이구나    </p>
-</blockquote>
-
+          <p>마크 다운 예제</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/23/mark-down-sample/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -609,7 +518,7 @@
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
             
-            <a href="/2019/08/23/d3-introduce/" class="post-title-link" itemprop="url">d3</a>
+            <a href="/2019/08/23/d3-introduce/" class="post-title-link" itemprop="url">d3 간단 소개</a>
           
         </h1>
 
@@ -635,9 +544,29 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-08-28 10:54:32" itemprop="dateModified" datetime="2019-08-28T10:54:32+09:00">2019-08-28</time>
+                <time title="Modified: 2019-08-28 18:48:37" itemprop="dateModified" datetime="2019-08-28T18:48:37+09:00">2019-08-28</time>
               </span>
             
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/" itemprop="url" rel="index"><span itemprop="name">Web</span></a></span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Web/D3/" itemprop="url" rel="index"><span itemprop="name">D3</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -659,59 +588,16 @@
 <li><strong><em><code>&lt;g&gt;</code></em></strong></li>
 <li><strong><em><code>&lt;path&gt;</code></em></strong><ul>
 <li>d 속성이 결정하는 도형의 영역이다. </li>
-<li>d 속성 마지막에 Z 문자열이 있으면 영역(area)이되고 없다면 선이나 곡선등 열린 도형(?)이 된다.</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><h2 id="데이타-변환"><a href="#데이타-변환" class="headerlink" title="데이타 변환"></a>데이타 변환</h2><ol>
-<li><strong><em>캐스팅 ( 형변환 )</em></strong></li>
-<li><strong><em>정규화 ( 스케일과 규모변경 )</em></strong><ul>
-<li>scaleLinear()</li>
-</ul>
-</li>
-<li><strong><em>비닝 ( 그룹화 : 데이터 분류 )</em></strong></li>
-<li><strong><em>내포 ( 계층화 )</em></strong></li>
-</ol>
-</li>
-</ul>
-<ul>
-<li><h2 id="d3가-제공하는-기능의-3대-유형"><a href="#d3가-제공하는-기능의-3대-유형" class="headerlink" title="d3가 제공하는 기능의 3대 유형"></a>d3가 제공하는 기능의 3대 유형</h2><ol>
-<li><p><strong><em>생성기</em></strong></p>
-<ul>
-<li><code>&lt;path&gt;</code>요소의 d 속성을 작성하는데 필요한 과정 추상화함으로써 복잡한 SVG <code>&lt;path&gt;</code>요소의 생성과정을 단순하게 만들어준다.</li>
-<li><code>&lt;path&gt;</code>요소에 들어가는 d 속성 문자열을 생성</li>
-<li>d3.svg.line(), d3.svg.area(), d3.svg.arc(), d3.svg.diagoal() </li>
-</ul>
-</li>
-<li><p><strong><em>컴포넌트</em></strong></p>
-<ul>
-<li><p>특정 차트 컴포넌트를 그리는데 필요한 일련의 화면 객체 생성</p>
-</li>
-<li><p>d3.svg.axis : <code>&lt;line&gt;</code>, <code>&lt;path&gt;</code>, <code>&lt;g&gt;</code>, <code>&lt;text&gt;</code>요소를 생성</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> d3 <span class="keyword">from</span> <span class="string">'d3'</span></span><br><span class="line"><span class="keyword">var</span> scatterData = [&#123; <span class="attr">friends</span>: <span class="number">5</span>, <span class="attr">salary</span>: <span class="number">22000</span> &#125;,</span><br><span class="line">&#123; <span class="attr">friends</span>: <span class="number">3</span>, <span class="attr">salary</span>: <span class="number">18000</span> &#125;, &#123; <span class="attr">friends</span>: <span class="number">10</span>, <span class="attr">salary</span>: <span class="number">88000</span> &#125;,</span><br><span class="line">&#123; <span class="attr">friends</span>: <span class="number">0</span>, <span class="attr">salary</span>: <span class="number">180000</span> &#125;, &#123; <span class="attr">friends</span>: <span class="number">27</span>, <span class="attr">salary</span>: <span class="number">56000</span> &#125;,</span><br><span class="line">&#123; <span class="attr">friends</span>: <span class="number">8</span>, <span class="attr">salary</span>: <span class="number">74000</span> &#125;]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">instance</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> targetContainer = instance.$el</span><br><span class="line">    d3.select(targetContainer).append(<span class="string">'svg'</span>)</span><br><span class="line">    draw()    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> xExtent = d3.extent(scatterData, d=&gt; d.salary)</span><br><span class="line">    <span class="keyword">var</span> yExtent = d3.extent(scatterData, d=&gt; d.friends)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">var</span> xScale = d3.scaleLinear().domain(xExtent).range([<span class="number">0</span>,<span class="number">500</span>])</span><br><span class="line">    <span class="keyword">var</span> yScale = d3.scaleLinear().domain(yExtent).range([<span class="number">0</span>,<span class="number">500</span>])</span><br><span class="line"></span><br><span class="line">    d3.select(<span class="string">'svg'</span>).selectAll(<span class="string">'circle'</span>)</span><br><span class="line">        .data(scatterData).enter().append(<span class="string">'circle'</span>)</span><br><span class="line">        .attr(<span class="string">'r'</span>, <span class="number">5</span>).attr(<span class="string">'cx'</span>, d =&gt; xScale(d.salary))</span><br><span class="line">        .attr(<span class="string">'cy'</span>, d =&gt; yScale(d.friends))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> yAxis = d3.axisRight().scale(yScale)</span><br><span class="line">    d3.select(<span class="string">'svg'</span>).append(<span class="string">'g'</span>).attr(<span class="string">'id'</span>,<span class="string">'yAxisG'</span>).call(yAxis)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> xAxis = d3.axisBottom().scale(xScale)</span><br><span class="line">    d3.select(<span class="string">'svg'</span>).append(<span class="string">'g'</span>).attr(<span class="string">'id'</span>,<span class="string">'xAxisG'</span>).call(xAxis)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">export</span> &#123;</span><br><span class="line">    test</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>점으로 선 그리기</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> d3 <span class="keyword">from</span> <span class="string">'d3'</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">var</span> scatterData = [&#123; <span class="attr">day</span>: <span class="number">1</span>, <span class="attr">friends</span>: <span class="number">5</span>, <span class="attr">salary</span>: <span class="number">3</span> &#125;,</span><br><span class="line">&#123; <span class="attr">day</span>: <span class="number">2</span>, <span class="attr">friends</span>: <span class="number">3</span>, <span class="attr">salary</span>: <span class="number">4</span> &#125;, &#123; <span class="attr">day</span>: <span class="number">3</span>, <span class="attr">friends</span>: <span class="number">10</span>, <span class="attr">salary</span>: <span class="number">7</span> &#125;,</span><br><span class="line">&#123; <span class="attr">day</span>: <span class="number">4</span>, <span class="attr">friends</span>: <span class="number">0</span>, <span class="attr">salary</span>: <span class="number">7</span> &#125;, &#123; <span class="attr">day</span>: <span class="number">5</span>, <span class="attr">friends</span>: <span class="number">27</span>, <span class="attr">salary</span>: <span class="number">11</span> &#125;,</span><br><span class="line">&#123; <span class="attr">day</span>: <span class="number">6</span>, <span class="attr">friends</span>: <span class="number">8</span>, <span class="attr">salary</span>: <span class="number">1</span> &#125;]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">instance</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> targetContainer = instance.$el</span><br><span class="line">    d3.select(targetContainer).append(<span class="string">'svg'</span>)</span><br><span class="line">    draw()</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> blue = <span class="string">'#5eaec5'</span>, green = <span class="string">'#92c463'</span></span><br><span class="line">    <span class="keyword">var</span> xScale = d3.scaleLinear().domain([<span class="number">0</span>, <span class="number">10</span>]).range([<span class="number">0</span>, <span class="number">500</span>])</span><br><span class="line">    <span class="keyword">var</span> yScale = d3.scaleLinear().domain([<span class="number">0</span>, <span class="number">27</span>]).range([<span class="number">0</span>, <span class="number">500</span>])</span><br><span class="line">    <span class="keyword">var</span> xAxis = d3.axisBottom()</span><br><span class="line">        .scale(xScale)</span><br><span class="line">        .tickSize(<span class="number">500</span>)</span><br><span class="line">        .ticks(<span class="number">4</span>)</span><br><span class="line"></span><br><span class="line">    d3.select(<span class="string">'svg'</span>).append(<span class="string">'g'</span>).attr(<span class="string">'id'</span>, <span class="string">'xAxisG'</span>).call(xAxis)</span><br><span class="line">    <span class="keyword">var</span> yAxis = d3.axisRight()</span><br><span class="line">        .scale(yScale)</span><br><span class="line">        .ticks(<span class="number">16</span>)</span><br><span class="line">        .tickSize(<span class="number">500</span>)</span><br><span class="line">    d3.select(<span class="string">'svg'</span>).append(<span class="string">'g'</span>).attr(<span class="string">'id'</span>, <span class="string">'yAxisG'</span>).call(yAxis)</span><br><span class="line"></span><br><span class="line">    d3.select(<span class="string">'svg'</span>).selectAll(<span class="string">'circle.friends'</span>)</span><br><span class="line">        .data(scatterData)</span><br><span class="line">        .enter()</span><br><span class="line">        .append(<span class="string">'circle'</span>)</span><br><span class="line">        .attr(<span class="string">'class'</span>, <span class="string">'friends'</span>)</span><br><span class="line">        .attr(<span class="string">'r'</span>, <span class="number">5</span>)</span><br><span class="line">        .attr(<span class="string">'cx'</span>, d =&gt; xScale(d.day))</span><br><span class="line">        .attr(<span class="string">'cy'</span>, d =&gt; yScale(d.friends))</span><br><span class="line">        .style(<span class="string">'fill'</span>, blue)</span><br><span class="line"></span><br><span class="line">    d3.select(<span class="string">'svg'</span>).selectAll(<span class="string">'circle.salary'</span>)</span><br><span class="line">        .data(scatterData)</span><br><span class="line">        .enter()</span><br><span class="line">        .append(<span class="string">'circle'</span>)</span><br><span class="line">        .attr(<span class="string">'class'</span>, <span class="string">'salary'</span>)</span><br><span class="line">        .attr(<span class="string">'r'</span>, <span class="number">5</span>)</span><br><span class="line">        .attr(<span class="string">'cx'</span>, d =&gt; xScale(d.day))</span><br><span class="line">        .attr(<span class="string">'cy'</span>, d =&gt; yScale(d.salary))</span><br><span class="line">        .style(<span class="string">'fill'</span>, green)</span><br><span class="line"></span><br><span class="line">    <span class="comment">// SVG 그림 코드 반환    </span></span><br><span class="line">    <span class="keyword">var</span> tweetLineFriends = d3.line()</span><br><span class="line">        .x(<span class="function"><span class="params">d</span> =&gt;</span> xScale(d.day))</span><br><span class="line">        .y(<span class="function"><span class="params">d</span> =&gt;</span> yScale(d.friends))</span><br><span class="line">    <span class="comment">//선 보간법 설정</span></span><br><span class="line">    tweetLineFriends.curve(d3.curveCardinal)        </span><br><span class="line">    d3.select(<span class="string">'svg'</span>)</span><br><span class="line">        .append(<span class="string">'path'</span>)</span><br><span class="line">        .attr(<span class="string">'d'</span>, tweetLineFriends(scatterData))</span><br><span class="line">        .attr(<span class="string">'fill'</span>, <span class="string">'none'</span>)</span><br><span class="line">        .attr(<span class="string">'stroke'</span>, <span class="string">'darkred'</span>)</span><br><span class="line">        .attr(<span class="string">'stroke-width'</span>, <span class="number">2</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// SVG 그림 코드 반환    </span></span><br><span class="line">    <span class="keyword">var</span> tweetLineSalary = d3.line()</span><br><span class="line">        .x(<span class="function"><span class="params">d</span> =&gt;</span> xScale(d.day))</span><br><span class="line">        .y(<span class="function"><span class="params">d</span> =&gt;</span> yScale(d.salary))</span><br><span class="line">    <span class="comment">//선 보간법 설정</span></span><br><span class="line">    tweetLineSalary.curve(d3.curveStep)        </span><br><span class="line">    <span class="comment">// tweetLineSalary.curve(d3.curveBasis)                </span></span><br><span class="line">    d3.select(<span class="string">'svg'</span>)</span><br><span class="line">        .append(<span class="string">'path'</span>)</span><br><span class="line">        .attr(<span class="string">'d'</span>, tweetLineSalary(scatterData))</span><br><span class="line">        .attr(<span class="string">'fill'</span>, <span class="string">'none'</span>)</span><br><span class="line">        .attr(<span class="string">'stroke'</span>, <span class="string">'gray'</span>)</span><br><span class="line">        .attr(<span class="string">'stroke-width'</span>, <span class="number">2</span>)    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>누적 차트</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> * <span class="keyword">as</span> d3 <span class="keyword">from</span> <span class="string">'d3'</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params">instance</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> targetContainer = instance.$el</span><br><span class="line">    d3.select(targetContainer).append(<span class="string">'svg'</span>)</span><br><span class="line">    draw()</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// movie.csv</span></span><br><span class="line"><span class="comment">// day,titanic,avatar,akira,frozen,deliverance,avengers</span></span><br><span class="line"><span class="comment">// 1,20,8,3,0,0,0</span></span><br><span class="line"><span class="comment">// 2,18,5,1,13,0,0</span></span><br><span class="line"><span class="comment">// 3,14,3,1,10,0,0</span></span><br><span class="line"><span class="comment">// 4,7,3,0,5,27,15</span></span><br><span class="line"><span class="comment">// 5,4,3,0,2,20,14</span></span><br><span class="line"><span class="comment">// 6,3,1,0,0,10,13</span></span><br><span class="line"><span class="comment">// 7,2,0,0,0,8,12</span></span><br><span class="line"><span class="comment">// 8,0,0,0,0,6,11</span></span><br><span class="line"><span class="comment">// 9,0,0,0,0,3,9</span></span><br><span class="line"><span class="comment">// 10,0,0,0,0,1,8</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">draw</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    d3.csv(<span class="string">'/src/renderer/pages/countryInfo/d3Sample/4/movie.csv'</span>).then(<span class="function"><span class="params">data</span> =&gt;</span> areaChart(data))</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">areaChart</span>(<span class="params">data</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> fillScale = d3.scaleOrdinal()</span><br><span class="line">        .domain([<span class="string">'titanic'</span>, <span class="string">'avatar'</span>, <span class="string">'akira'</span>, <span class="string">'frozen'</span>, <span class="string">'deliverance'</span>, <span class="string">'avengers'</span>])</span><br><span class="line">        .range([<span class="string">'#fcd88a'</span>, <span class="string">'#cf7c1c'</span>, <span class="string">'#93c464'</span>, <span class="string">'#75734F'</span>, <span class="string">'#5eafc6'</span>, <span class="string">'#41a368'</span>])</span><br><span class="line"></span><br><span class="line">    <span class="keyword">var</span> xScale = d3.scaleLinear().domain([<span class="number">1</span>, <span class="number">8</span>]).range([<span class="number">20</span>, <span class="number">470</span>])</span><br><span class="line">    <span class="keyword">var</span> yScale = d3.scaleLinear().domain([<span class="number">0</span>, <span class="number">55</span>]).range([<span class="number">480</span>, <span class="number">20</span>])</span><br><span class="line"></span><br><span class="line">    <span class="built_in">Object</span>.keys(data[<span class="number">0</span>]).forEach(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">if</span> (key != <span class="string">'day'</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> movieArea = d3.area()</span><br><span class="line">                .x(<span class="function"><span class="params">d</span> =&gt;</span> xScale(d.day))</span><br><span class="line">                .y0(<span class="function"><span class="params">d</span> =&gt;</span> yScale(simpleStacking(d, key) - d[key]))</span><br><span class="line">                .y1(<span class="function"><span class="params">d</span> =&gt;</span> yScale(simpleStacking(d, key)))</span><br><span class="line">                .curve(d3.curveBasis)</span><br><span class="line"></span><br><span class="line">            d3.select(<span class="string">'svg'</span>)</span><br><span class="line">                .append(<span class="string">'path'</span>)</span><br><span class="line">                .style(<span class="string">'id'</span>, key + <span class="string">'Area'</span>)</span><br><span class="line">                .attr(<span class="string">'d'</span>, movieArea(data))</span><br><span class="line">                .attr(<span class="string">'fill'</span>, fillScale(key))</span><br><span class="line">                .attr(<span class="string">'stroke'</span>, <span class="string">'black'</span>)</span><br><span class="line">                .attr(<span class="string">'stroke-width'</span>, <span class="number">1</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;)</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">simpleStacking</span>(<span class="params">lineData, lineKey</span>) </span>&#123;</span><br><span class="line">        <span class="keyword">var</span> newHeight = <span class="number">0</span></span><br><span class="line">        <span class="built_in">Object</span>.keys(lineData).every(<span class="function"><span class="params">key</span> =&gt;</span> &#123;</span><br><span class="line">            <span class="keyword">if</span> (key !== <span class="string">'day'</span>) &#123;</span><br><span class="line">                newHeight += <span class="built_in">parseInt</span>(lineData[key])</span><br><span class="line">                <span class="keyword">if</span> (key === lineKey) &#123;</span><br><span class="line">                    <span class="keyword">return</span> <span class="literal">false</span></span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span></span><br><span class="line">        &#125;)</span><br><span class="line">        <span class="keyword">return</span> newHeight</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">var</span> legendA = d3.legendColor().scale(fillScale)</span><br><span class="line">    d3.select(<span class="string">'svg'</span>)</span><br><span class="line">        .style(<span class="string">'width'</span>, <span class="string">'1000px'</span>)</span><br><span class="line"></span><br><span class="line">    d3.select(<span class="string">'svg'</span>)</span><br><span class="line">        .append(<span class="string">'g'</span>)</span><br><span class="line">        .attr(<span class="string">'transform'</span>, <span class="string">'translate(500, 0)'</span>)</span><br><span class="line">        .call(legendA)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-</li>
-<li><p>d3.svg.brush</p>
-</li>
-</ul>
-</li>
-<li><p><strong><em>레이아웃</em></strong></p>
-<ul>
-<li>일련의 데이터, 그리고 생성기로 구성된 배열을 입력받아 특정 위치와 크기로 그리는데 필요한 데이터 속성을 동적,정적 추가</li>
-</ul>
-</li>
-</ol>
-</li>
-</ul>
-
+<li>d 속성 마지막에 Z 문자열이 있으면 영역(area)이되고 없다면 선이나 곡선등 열린 도형(?)이 된다.
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/2019/08/23/d3-introduce/#more" rel="contents">
+                Read more &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
         
       
     </div>
@@ -794,7 +680,7 @@
         
           
         
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">categories</span>
         
       </div>
@@ -825,7 +711,9 @@
         
           
         
-        <span class="site-state-item-count">7</span>
+          
+        
+        <span class="site-state-item-count">9</span>
         <span class="site-state-item-name">tags</span>
         
       </div>
