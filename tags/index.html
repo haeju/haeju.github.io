@@ -54,23 +54,15 @@
   };
 </script>
 
-  <meta name="description" content="ipc 통신  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸">
-<meta name="keywords" content="Electron,fileRead,fileWrite,FS,nodeIntegration,vue">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Electron에서의 파일처리">
-<meta property="og:url" content="https://letzgitit.github.io/2019/08/28/electron-file-rw/index.html">
+  <meta property="og:type" content="website">
+<meta property="og:title" content="dev blog">
+<meta property="og:url" content="https://letzgitit.github.io/tags/index.html">
 <meta property="og:site_name" content="dev blog">
-<meta property="og:description" content="ipc 통신  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸">
 <meta property="og:locale" content="en">
-<meta property="og:image" content="https://letzgitit.github.io/2019/08/28/electron-file-rw/post1.png">
-<meta property="og:image" content="https://letzgitit.github.io/2019/08/28/electron-file-rw/post2.png">
-<meta property="og:image" content="https://letzgitit.github.io/2019/08/28/electron-file-rw/post3.png">
-<meta property="og:updated_time" content="2019-09-06T02:15:56.274Z">
+<meta property="og:updated_time" content="2019-09-10T09:35:21.890Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Electron에서의 파일처리">
-<meta name="twitter:description" content="ipc 통신  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸">
-<meta name="twitter:image" content="https://letzgitit.github.io/2019/08/28/electron-file-rw/post1.png">
-  <link rel="canonical" href="https://letzgitit.github.io/2019/08/28/electron-file-rw/">
+<meta name="twitter:title" content="dev blog">
+  <link rel="canonical" href="https://letzgitit.github.io/tags/">
 
 
 <script id="page-configurations">
@@ -78,13 +70,13 @@
   CONFIG.page = {
     sidebar: "",
     isHome: false,
-    isPost: true,
-    isPage: false,
+    isPost: false,
+    isPage: true,
     isArchive: false
   };
 </script>
 
-  <title>Electron에서의 파일처리 | dev blog</title>
+  <title>Tag | dev blog</title>
   <meta name="generator" content="Hexo 3.9.0">
   
 
@@ -218,181 +210,132 @@
         <div class="content-wrap">
             
 
+    
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+      
+      
+    
+    
+
+  
+
           <div id="content" class="content page-post-detail">
             
 
   <div id="posts" class="posts-expand">
     
-
-  <article class="post" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://letzgitit.github.io/2019/08/28/electron-file-rw/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="letz git it">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="dev blog">
-    </span>
+    
+    
+    <div class="post-block page">
       <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">Electron에서의 파일처리
 
-          
-        </h1>
+<h1 class="post-title" itemprop="name headline">
 
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">Posted on</span>
+</h1>
 
-              
-                
-              
+<div class="post-meta">
+  
 
-              <time title="Created: 2019-08-28 14:10:36" itemprop="dateCreated datePublished" datetime="2019-08-28T14:10:36+09:00">2019-08-28</time>
-            </span>
-          
-            
+</div>
 
-            
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2019-09-06 11:15:56" itemprop="dateModified" datetime="2019-09-06T11:15:56+09:00">2019-09-06</time>
-              </span>
-            
-          
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/front-end/" itemprop="url" rel="index"><span itemprop="name">front-end</span></a></span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/front-end/electron/" itemprop="url" rel="index"><span itemprop="name">electron</span></a></span>
-
-                
-                
-              
-            </span>
-          
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
+</header>
 
       
-        <h3 id="ipc-통신"><a href="#ipc-통신" class="headerlink" title="ipc 통신"></a>ipc 통신</h3><p>  electron에서의 파일처리는 node.js에서 제공하는 fs(file system) 모듈로 이용가능 하다.<br>  단, Renderer Process에서 사용하기 위해서는 아래와 같이 “nodeIntegration: true”로 설정되어야 한다.<br>  바로 사용해도 무방하지만 fs(file system)은 가급적 MainProcess에서 처리하는걸로 하였으며 이에 ipc 통신을 통해 처리되도록 기능 추가.</p>
-<a id="more"></a>
-
-<h3 id="이벤트-등록"><a href="#이벤트-등록" class="headerlink" title="이벤트 등록"></a>이벤트 등록</h3><p>  Main Process에서 src/main/ipc/fs.js 작성하면 Wrapper모듈을 ipc 이벤트로 등록.</p>
-<img src="/2019/08/28/electron-file-rw/post1.png" title="이벤트등록">
-
-
-<h3 id="prototype-지정"><a href="#prototype-지정" class="headerlink" title="prototype 지정"></a>prototype 지정</h3><p>  Renderer Process에서 플러그인 src/renderer/plugins/ipc.js 내에 prototype지정.</p>
-<img src="/2019/08/28/electron-file-rw/post2.png" title="prototype지정">
-
-
-<h3 id="사용"><a href="#사용" class="headerlink" title="사용"></a>사용</h3><p>  vue나 store에서 사용.</p>
-<img src="/2019/08/28/electron-file-rw/post3.png" title="사용">
-
-<ul>
-<li>파일 쓰기<ul>
-<li>this.$writeFile(‘파일경로’, ‘데이타’, [‘옵션’])</li>
-<li>각 파라미터는 fs.writeFile와 동일</li>
-<li>Promise로 리턴되므로 async await를 사용</li>
-</ul>
-</li>
-<li>파일 읽기<ul>
-<li>this.$readFile(‘파일경로’, [‘옵션’])</li>
-<li>각 파라미터는 fs.readFile와 동일</li>
-<li>Promise로 리턴되므로 async await를 사용</li>
-</ul>
-</li>
-</ul>
-<h3 id="Related-Posts"><a href="#Related-Posts" class="headerlink" title="Related Posts"></a>Related Posts</h3><hr>
-
+      
+      
+      <div class="post-body">
+        
+          <div class="tag-cloud">
+            <div class="tag-cloud-title">
+              
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+                
+                  
+                
+              
+              14 tags in total
+            </div>
+            <div class="tag-cloud-tags">
+              
+                <a href="/tags/Electron/" style="font-size: 12px; color: #ccc">Electron</a> <a href="/tags/FS/" style="font-size: 12px; color: #ccc">FS</a> <a href="/tags/Module-Bundlers/" style="font-size: 12px; color: #ccc">Module-Bundlers</a> <a href="/tags/cyberAttack/" style="font-size: 12px; color: #ccc">cyberAttack</a> <a href="/tags/d3/" style="font-size: 12px; color: #ccc">d3</a> <a href="/tags/fileRead/" style="font-size: 12px; color: #ccc">fileRead</a> <a href="/tags/fileWrite/" style="font-size: 12px; color: #ccc">fileWrite</a> <a href="/tags/nodeIntegration/" style="font-size: 12px; color: #ccc">nodeIntegration</a> <a href="/tags/q-table/" style="font-size: 12px; color: #ccc">q-table</a> <a href="/tags/q-td/" style="font-size: 12px; color: #ccc">q-td</a> <a href="/tags/q-tr/" style="font-size: 12px; color: #ccc">q-tr</a> <a href="/tags/quasar/" style="font-size: 12px; color: #ccc">quasar</a> <a href="/tags/vue/" style="font-size: 12px; color: #ccc">vue</a> <a href="/tags/정보시각화/" style="font-size: 12px; color: #ccc">정보시각화</a>
+              
+            </div>
+          </div>
+        
+      </div>
+      
+      
+      
     </div>
+    
 
     
     
     
-        
-      
-
-      <footer class="post-footer">
-          
-            
-          
-          <div class="post-tags">
-            
-              <a href="/tags/Electron/" rel="tag"># Electron</a>
-            
-              <a href="/tags/fileRead/" rel="tag"># fileRead</a>
-            
-              <a href="/tags/fileWrite/" rel="tag"># fileWrite</a>
-            
-              <a href="/tags/FS/" rel="tag"># FS</a>
-            
-              <a href="/tags/nodeIntegration/" rel="tag"># nodeIntegration</a>
-            
-              <a href="/tags/vue/" rel="tag"># vue</a>
-            
-          </div>
-        
-
-        
-
-          <div class="post-nav">
-            <div class="post-nav-next post-nav-item">
-              
-                <a href="/2019/08/28/d3-geo-info-visualize/" rel="next" title="d3를 이용한 지리 데이타 시각화">
-                  <i class="fa fa-chevron-left"></i> d3를 이용한 지리 데이타 시각화
-                </a>
-              
-            </div>
-
-            <span class="post-nav-divider"></span>
-
-            <div class="post-nav-prev post-nav-item">
-              
-                <a href="/2019/09/04/quasar-table-style/" rel="prev" title="q-table에서 특정 행에 스타일 적용하기">
-                  q-table에서 특정 행에 스타일 적용하기 <i class="fa fa-chevron-right"></i>
-                </a>
-              
-            </div>
-          </div>
-        
-      </footer>
-    
-  </div>
-  
-  
-  
-  </article>
-
   </div>
 
 
@@ -429,10 +372,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc">
-            <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#ipc-통신"><span class="nav-number">1.</span> <span class="nav-text">ipc 통신</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#이벤트-등록"><span class="nav-number">2.</span> <span class="nav-text">이벤트 등록</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#prototype-지정"><span class="nav-number">3.</span> <span class="nav-text">prototype 지정</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#사용"><span class="nav-number">4.</span> <span class="nav-text">사용</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Related-Posts"><span class="nav-number">5.</span> <span class="nav-text">Related Posts</span></a></li></ol></div>
-          </div>
-        
       </div>
       <!--/noindex-->
 
@@ -643,8 +582,9 @@
 
 
   
-  <script src="/js/post-details.js?v=7.3.0"></script>
+    <script src="/js/post-details.js?v=7.3.0"></script>
 
+  
 
 </body>
 </html>
